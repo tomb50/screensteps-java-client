@@ -1,0 +1,10 @@
+package tomb.springtest.screenstepsservice.model;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: tombeadman
+ * Date: 22/11/14
+ * Time: 19:16
+ */
+public class Comment {
+}

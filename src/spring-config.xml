@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <context:component-scan base-package="tomb.springtest.screenstepsservice"/>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="messageConverters">
+            <list>
+                <bean id="messageConverter"
+                      class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+                    <property name="marshaller" ref="xstreamMarshaller"/>
+                    <property name="unmarshaller" ref="xstreamMarshaller"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="xstreamMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+        <property name="autodetectAnnotations" value="true"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>tomb.springtest.screenstepsservice.model.Asset</value>
+                <value>tomb.springtest.screenstepsservice.model.Chapter</value>
+                <value>tomb.springtest.screenstepsservice.model.Comment</value>
+                <value>tomb.springtest.screenstepsservice.model.Lesson</value>
+                <value>tomb.springtest.screenstepsservice.model.Lessons</value>
+                <value>tomb.springtest.screenstepsservice.model.Manual</value>
+                <value>tomb.springtest.screenstepsservice.model.Space</value>
+                <value>tomb.springtest.screenstepsservice.model.Spaces</value>
+                <value>tomb.springtest.screenstepsservice.model.Step</value>
+                <value>tomb.springtest.screenstepsservice.model.Tag</value>
+            </list>
+        </property>
+    </bean>
+</beans>
+
+
+
