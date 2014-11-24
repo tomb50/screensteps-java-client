@@ -1,4 +1,4 @@
-package tomb.springtest.screenstepsservice.model;
+package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
@@ -45,5 +45,15 @@ public class Asset {
 
     public String getUrl() {
         return url;
+    }
+
+    @Override
+    public String toString() {
+        return "Asset{" +
+                "title='" + title + '\'' +
+                ", id=" + id +
+                ", type='" + type + '\'' +
+                ", assetType='" + assetType + '\'' +
+                '}';
     }
 }

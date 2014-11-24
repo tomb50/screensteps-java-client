@@ -1,4 +1,4 @@
-package tomb.springtest.screenstepsservice.model;
+package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

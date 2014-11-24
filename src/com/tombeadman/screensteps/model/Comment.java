@@ -1,4 +1,4 @@
-package tomb.springtest.screenstepsservice.model;
+package com.tombeadman.screensteps.model;
 
 /**
  * Created with IntelliJ IDEA.

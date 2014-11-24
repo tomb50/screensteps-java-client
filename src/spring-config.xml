@@ -7,7 +7,7 @@
 	   http://www.springframework.org/schema/context
 	   http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
-    <context:component-scan base-package="tomb.springtest.screenstepsservice"/>
+    <context:component-scan base-package="com.tombeadman.screensteps"/>
 
     <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
         <property name="messageConverters">
@@ -25,16 +25,16 @@
         <property name="autodetectAnnotations" value="true"/>
         <property name="annotatedClasses">
             <list>
-                <value>tomb.springtest.screenstepsservice.model.Asset</value>
-                <value>tomb.springtest.screenstepsservice.model.Chapter</value>
-                <value>tomb.springtest.screenstepsservice.model.Comment</value>
-                <value>tomb.springtest.screenstepsservice.model.Lesson</value>
-                <value>tomb.springtest.screenstepsservice.model.Lessons</value>
-                <value>tomb.springtest.screenstepsservice.model.Manual</value>
-                <value>tomb.springtest.screenstepsservice.model.Space</value>
-                <value>tomb.springtest.screenstepsservice.model.Spaces</value>
-                <value>tomb.springtest.screenstepsservice.model.Step</value>
-                <value>tomb.springtest.screenstepsservice.model.Tag</value>
+                <value>com.tombeadman.screensteps.model.Asset</value>
+                <value>com.tombeadman.screensteps.model.Chapter</value>
+                <value>com.tombeadman.screensteps.model.Comment</value>
+                <value>com.tombeadman.screensteps.model.Lesson</value>
+                <value>com.tombeadman.screensteps.model.Lessons</value>
+                <value>com.tombeadman.screensteps.model.Manual</value>
+                <value>com.tombeadman.screensteps.model.Space</value>
+                <value>com.tombeadman.screensteps.model.Spaces</value>
+                <value>com.tombeadman.screensteps.model.Step</value>
+                <value>com.tombeadman.screensteps.model.Tag</value>
             </list>
         </property>
     </bean>
