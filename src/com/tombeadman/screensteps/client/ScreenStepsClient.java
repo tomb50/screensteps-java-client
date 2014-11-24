@@ -88,14 +88,13 @@ public class ScreenStepsClient {
      * Retrieves all Lessons in a Space that have content matching the search string
      * -> /s/#{space_id}/searches?text=#{search_text} or /spaces/#{space_id}/searches?text=#{search_text}
      */
-  public Lessons searchSpaces(final Integer spaceId, final String searchText)
-  {
-      final String url = "/s/".concat(String.valueOf(spaceId)).concat("/searches?text=").concat(searchText);
-      final ResponseEntity<Lessons> responseEntity = restTemplate.exchange(baseURL + url
-              , HttpMethod.GET, httpEntity, Lessons.class);
-      return responseEntity.getBody();
+    public Lessons searchSpaces(final String spaceId, final String searchText) {
+        final String url = "/s/".concat(spaceId).concat("/searches?text=").concat(searchText);
+        final ResponseEntity<Lessons> responseEntity = restTemplate.exchange(baseURL + url
+                , HttpMethod.GET, httpEntity, Lessons.class);
+        return responseEntity.getBody();
 
-  }
+    }
 
 
     ////////////////////////////////////////////////////////////////
@@ -107,8 +106,8 @@ public class ScreenStepsClient {
     /*
      * Retrieves a single Manual -> /s/#{space_id}/m/{#manual_id} or /spaces/#{space_id}/manuals/{#manual_id}
      */
-    public Manual getManual(final Integer spaceId, final Integer manualId) {
-        final String url = "/s/".concat(String.valueOf(spaceId)).concat("/m/").concat(String.valueOf(manualId));
+    public Manual getManual(final String spaceId, final String manualId) {
+        final String url = "/s/".concat(spaceId).concat("/m/").concat(manualId);
         final ResponseEntity<Manual> responseEntity = restTemplate.exchange(baseURL + url
                 , HttpMethod.GET, httpEntity, Manual.class);
         return responseEntity.getBody();
@@ -118,9 +117,9 @@ public class ScreenStepsClient {
      * Retrieves a single Lesson =->  /s/#{space_id}/m/{#manual_id}/l/#{lesson_id}
      * or spaces/#{space_id}/manuals/{#manual_id}/lessons/#{lesson_id}
      */
-    public Lesson getLesson(final Integer spaceId, final Integer manualId, final Integer lessonId) {
-        final String url = "/s/".concat(String.valueOf(spaceId)).concat("/m/")
-                .concat(String.valueOf(manualId)).concat("/l/").concat(String.valueOf(lessonId));
+    public Lesson getLesson(final String spaceId, final String manualId, final String lessonId) {
+        final String url = "/s/".concat(spaceId).concat("/m/")
+                .concat(manualId).concat("/l/").concat(lessonId);
         final ResponseEntity<Lesson> responseEntity = restTemplate.exchange(baseURL + url
                 , HttpMethod.GET, httpEntity, Lesson.class);
         return responseEntity.getBody();
@@ -130,10 +129,9 @@ public class ScreenStepsClient {
  * Retrieves all Lessons in a Space that have content matching the search string
  * -> /s/#{space_id}/searches?text=#{search_text} or /spaces/#{space_id}/searches?text=#{search_text}
  */
-    public Lessons searchManual(final Integer spaceId, final Integer manualId, final String searchText)
-    {
-        final String url = "/s/".concat(String.valueOf(spaceId)).concat("/m/")
-            .concat(String.valueOf(manualId)).concat("/searches?text=").concat(searchText);
+    public Lessons searchManual(final String spaceId, final String manualId, final String searchText) {
+        final String url = "/s/".concat(spaceId).concat("/m/")
+                .concat(manualId).concat("/searches?text=").concat(searchText);
         final ResponseEntity<Lessons> responseEntity = restTemplate.exchange(baseURL + url
                 , HttpMethod.GET, httpEntity, Lessons.class);
         return responseEntity.getBody();
@@ -144,9 +142,9 @@ public class ScreenStepsClient {
     * Retrieves all Lessons in a Manual for the specified tag
     * -> /s/#{space_id}/m/#{manual_id}/tags?tag=#{tag} or /spaces/#{space_id}/manuals/#{manual_id}/tags?tag=#{tag}
     */
-    public Lessons searchTags(final Integer spaceId, final Integer manualId, final String tag) {
-        final String url = "/s/".concat(String.valueOf(spaceId)).concat("/m/")
-                .concat(String.valueOf(manualId)).concat("/tags?tag=").concat(tag);
+    public Lessons searchTags(final String spaceId, final String manualId, final String tag) {
+        final String url = "/s/".concat(spaceId).concat("/m/")
+                .concat(manualId).concat("/tags?tag=").concat(tag);
         final ResponseEntity<Lessons> responseEntity = restTemplate.exchange(baseURL + url
                 , HttpMethod.GET, httpEntity, Lessons.class);
         return responseEntity.getBody();
@@ -157,16 +155,14 @@ public class ScreenStepsClient {
     * Retrieves all Lessons in a Space for the specified tag
     * -> /s/#{space_id}/tags?tag=#{tag} or /spaces/#{space_id}/tags?tag=#{tag}
     */
-    public Lessons searchTags(final Integer spaceId, final String tag) {
-        final String url = "/s/".concat(String.valueOf(spaceId)).concat("/m/")
+    public Lessons searchTags(final String spaceId, final String tag) {
+        final String url = "/s/".concat(spaceId).concat("/m/")
                 .concat("/tags?tag=").concat(tag);
         final ResponseEntity<Lessons> responseEntity = restTemplate.exchange(baseURL + url
                 , HttpMethod.GET, httpEntity, Lessons.class);
         return responseEntity.getBody();
 
     }
-
-
 
 
 }
