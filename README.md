@@ -16,6 +16,8 @@ A description of the available endpoints can be found [here][api].
 Status
 ------
 
-All basic models completed
+RC 0.9 released. All endpoints and models implemented. V1.0 to be release soon with minor re-factoring & optimizing.
+
+
 [ss]: http://www.screensteps.com
 [api]: http://help.screensteps.com/m/screenstepslive-api/pdf
