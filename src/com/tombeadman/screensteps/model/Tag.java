@@ -12,8 +12,18 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class Tag {
 
     private String name;
+    private Integer count;
+    private String url;
 
     public String getName() {
         return name;
+    }
+
+    public Integer getCount() {
+        return count;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
