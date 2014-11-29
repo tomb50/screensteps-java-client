@@ -13,7 +13,7 @@ import java.util.List;
 @XStreamAlias("chapter")
 public class Chapter {
     private String title;
-    private Integer id;
+    private String id;
     private Integer position;
     private String url;
 
@@ -24,7 +24,7 @@ public class Chapter {
         return title;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 

@@ -14,12 +14,13 @@ public class Step {
     private String instructions;
     @XStreamAlias("instructions_position")
     private String instructionsPosition;
-    private Integer id;
+    private String id;
     @XStreamAlias("anchor_name")
     private String anchorName;
     @XStreamAlias("parent_id")
     private Integer parentId;
     private Integer level;
+    private Media media;
 
     public String getTitle() {
         return title;
@@ -33,7 +34,7 @@ public class Step {
         return instructionsPosition;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 

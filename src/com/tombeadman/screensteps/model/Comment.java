@@ -7,4 +7,6 @@ package com.tombeadman.screensteps.model;
  * Time: 19:16
  */
 public class Comment {
+
+  ///todo when encountered
 }

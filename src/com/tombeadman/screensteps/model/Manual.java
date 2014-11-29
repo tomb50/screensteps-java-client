@@ -15,7 +15,7 @@ import java.util.List;
 public class Manual {
     private Space space;
     private String title;
-    private Integer id;
+    private String id;
     private String message;
     private List<Chapter> chapters;
     private List<Tag> tags;
@@ -35,7 +35,7 @@ public class Manual {
         return title;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 

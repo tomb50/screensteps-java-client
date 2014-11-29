@@ -16,7 +16,7 @@ public class Lesson {
     private Space space;
     private Chapter chapter;
     private Manual manual;
-    private Integer id;
+    private String id;
     private String title;
     private String url;
     private String description;
@@ -26,6 +26,7 @@ public class Lesson {
     private List<Tag> tags;
     private List<Comment> comments;
     private Asset asset;
+
 
     public Space getSpace() {
         return space;
@@ -39,7 +40,7 @@ public class Lesson {
         return manual;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -75,7 +76,9 @@ public class Lesson {
         return asset;
     }
 
-    @Override
+
+
+  @Override
     public String toString() {
         return "Lesson{" +
                 "title='" + title + '\'' +

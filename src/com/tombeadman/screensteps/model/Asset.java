@@ -11,7 +11,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 @XStreamAlias("asset")
 public class Asset {
     private String title;
-    private Integer id;
+    private String id;
     private String type; //todo enumerate
     @XStreamAlias("asset_type")
     private String assetType; //todo enumerate
@@ -23,7 +23,7 @@ public class Asset {
         return title;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
