@@ -18,8 +18,8 @@ public class Step {
     @XStreamAlias("anchor_name")
     private String anchorName;
     @XStreamAlias("parent_id")
-    private Integer parentId;
-    private Integer level;
+    private String parentId;
+    private String level;
     private Media media;
 
     public String getTitle() {
@@ -42,11 +42,11 @@ public class Step {
         return anchorName;
     }
 
-    public Integer getParentId() {
+    public String getParentId() {
         return parentId;
     }
 
-    public Integer getLevel() {
+    public String getLevel() {
         return level;
     }
 
