@@ -2,6 +2,8 @@ package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tombeadman
@@ -9,7 +11,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * Time: 19:03
  */
 @XStreamAlias("step")
-public class Step {
+public class Step implements Serializable{
     private String title;
     private String instructions;
     @XStreamAlias("instructions_position")

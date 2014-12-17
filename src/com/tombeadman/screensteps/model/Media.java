@@ -2,12 +2,14 @@ package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA. User: tombeadman Date: 29/11/14 Time: 13:40
  */
 
 @XStreamAlias("media")
-public class Media {
+public class Media implements Serializable{
     private String type;
     private String id;
     @XStreamAlias("full_size_id")

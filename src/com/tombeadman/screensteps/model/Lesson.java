@@ -2,6 +2,7 @@ package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  * Time: 17:02
  */
 @XStreamAlias("lesson")
-public class Lesson {
+public class Lesson implements Serializable{
 
     private Space space;
     private Chapter chapter;

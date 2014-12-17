@@ -2,6 +2,7 @@ package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 @XStreamAlias("space")
-public class Space {
+public class Space implements Serializable{
     private String id;
     private String title;
     private String permalink;

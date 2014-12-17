@@ -2,6 +2,8 @@ package com.tombeadman.screensteps.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tombeadman
@@ -9,7 +11,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * Time: 19:21
  */
 @XStreamAlias("asset")
-public class Asset {
+public class Asset implements Serializable{
     private String title;
     private String id;
     private String type; //todo enumerate
